@@ -366,8 +366,6 @@ Agentic-Job-Hunter/
 
 **🎯 Land Your Dream Job with AI-Powered Applications**
 
-Made with ❤️ by developers, for developers
-
-[Report Bug](https://github.com/iitsh/Agentic-Job-Hunter/issues) · [Request Feature](https://github.com/iitsh/Agentic-Job-Hunter/issues) · [Documentation](https://github.com/iitsh/Agentic-Job-Hunter/wiki)
+Made with ❤️
 
 </div>
