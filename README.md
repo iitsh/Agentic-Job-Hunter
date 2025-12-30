@@ -5,7 +5,6 @@ An intelligent multi-agent system that revolutionizes job applications by automa
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![CrewAI](https://img.shields.io/badge/CrewAI-latest-green.svg)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4--Turbo-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## 📋 Table of Contents
 
@@ -15,13 +14,9 @@ An intelligent multi-agent system that revolutionizes job applications by automa
 - [How It Works](#how-it-works)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Agents & Their Roles](#agents--their-roles)
-- [Output Examples](#output-examples)
 - [Project Structure](#project-structure)
 - [Best Practices](#best-practices)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## 🎯 Overview
 
@@ -32,7 +27,6 @@ An intelligent multi-agent system that revolutionizes job applications by automa
 - 📄 **Tailor** resumes to perfectly match job requirements
 - 💼 **Prepare** comprehensive interview materials and talking points
 
-Say goodbye to generic resumes and hello to personalized, ATS-optimized job applications that stand out!
 
 ## ✨ Features
 
@@ -339,57 +333,6 @@ After execution, you'll find two files:
 - PDF Search Tool
 - File Reader
 
-## 📊 Output Examples
-
-### Sample Tailored Resume Structure
-
-```markdown
-# John Doe
-**Software Engineer | Full-Stack Developer**
-
-## Summary
-Results-driven Software Engineer with 5+ years of experience in [relevant tech stack 
-matching job requirements]. Proven track record in [specific achievements relevant to 
-the job posting]...
-
-## Work Experience
-### Senior Developer at Tech Corp
-**Relevant Achievement**: Led migration of legacy system to microservices architecture, 
-matching the job requirement for distributed systems experience...
-
-## Skills
-[ATS-optimized skills matching job posting]
-- Python, React, Node.js
-- AWS, Docker, Kubernetes
-- [Additional relevant skills]
-
-## Education
-[Your education tailored to emphasize relevant coursework]
-```
-
-### Sample Interview Materials Structure
-
-```markdown
-# Interview Preparation Guide
-
-## Key Questions to Prepare For
-
-1. **Technical Questions**
-   - "Can you describe your experience with [specific technology from job posting]?"
-   - Suggested Answer: [Based on your resume and projects]
-
-2. **Behavioral Questions**
-   - "Tell me about a time when you [relevant scenario]"
-   - Talking Points: [Drawn from your experience]
-
-## Your Strengths to Highlight
-- [Key strength #1 matching job requirement]
-- [Key strength #2 matching job requirement]
-
-## Projects to Discuss
-- [Project name]: How it relates to job requirements
-- Key talking points...
-```
 
 ## 📁 Project Structure
 
@@ -409,180 +352,13 @@ Agentic-Job-Hunter/
 └── README.md                       # This file
 ```
 
-## 💡 Best Practices
-
-### For Best Results
-
-1. **Resume Quality**
-   - Use a well-structured PDF resume
-   - Include clear sections: Summary, Experience, Skills, Education
-   - Use bullet points for achievements
-
-2. **Personal Writeup**
-   - Be specific about your career goals
-   - Mention your strongest skills
-   - Include what you're passionate about
-   - Keep it concise (200-300 words)
-
-3. **GitHub Profile**
-   - Ensure your profile is public
-   - Have well-documented repositories
-   - Pin your best projects
-   - Keep your README files updated
-
-4. **Job Posting URL**
-   - Use the direct URL to the job posting
-   - Ensure the page is publicly accessible
-   - Avoid URLs behind login walls
-
-### Example Personal Writeup
-
-```
-I am a passionate full-stack developer with 5 years of experience building 
-scalable web applications. I specialize in React, Node.js, and Python, with 
-a strong focus on creating user-centric solutions. I've led teams of 3-5 
-developers and have experience with Agile methodologies. I'm particularly 
-interested in roles that involve system architecture and team leadership. 
-I love solving complex problems and am always eager to learn new technologies.
-```
-
-## 🔧 Customization
-
-### Modifying Agent Behavior
-
-You can customize agent behavior by modifying their `backstory` and `goal`:
-
-```python
-researcher = Agent(
-    role="Tech Job Researcher",
-    goal="YOUR_CUSTOM_GOAL",
-    backstory="YOUR_CUSTOM_BACKSTORY",
-    tools=[scrape_tool, search_tool],
-    verbose=True
-)
-```
-
-### Adjusting Task Output
-
-Modify the `expected_output` in tasks to change output format:
-
-```python
-resume_strategy_task = Task(
-    description="...",
-    expected_output="A detailed resume in [YOUR_PREFERRED_FORMAT]",
-    output_file="custom_output.md",
-    agent=resume_strategist
-)
-```
-
-## 🎨 Advanced Features
-
-### Async Task Execution
-
-Some tasks run in parallel for faster processing:
-
-```python
-research_task = Task(
-    # ... task configuration
-    async_execution=True  # Runs in parallel
-)
-```
-
-### Context-Aware Tasks
-
-Tasks can depend on outputs from other tasks:
-
-```python
-interview_preparation_task = Task(
-    # ... task configuration
-    context=[research_task, profile_task, resume_strategy_task]
-)
-```
-
-## 📈 Performance Tips
-
-1. **API Rate Limits**: The process may take 3-5 minutes due to API calls
-2. **Internet Connection**: Ensure stable connection for web scraping
-3. **Resume Format**: PDF format works best for accurate parsing
-4. **Job Posting Access**: Public job postings work better than those behind logins
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue**: `FileNotFoundError: YOUR_CV.pdf`
-- **Solution**: Ensure your resume is named correctly and in the root directory
-
-**Issue**: `API Key Error`
-- **Solution**: Check your `.env` file has correct API keys
-
-**Issue**: `Scraping Failed`
-- **Solution**: Verify the job posting URL is publicly accessible
-
-**Issue**: `Slow Execution`
-- **Solution**: This is normal - the process involves multiple API calls
-
-## 🚀 Future Enhancements
-
-- [ ] Support for multiple resume formats (DOCX, TXT)
-- [ ] LinkedIn profile integration
-- [ ] Cover letter generation
-- [ ] Multiple job applications in batch
-- [ ] Portfolio website generation
-- [ ] Salary negotiation guidance
-- [ ] Interview scheduling integration
-- [ ] Follow-up email templates
-- [ ] Job offer comparison tool
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Follow PEP 8 style guidelines
-- Add docstrings to new functions
-- Test with different job postings
-- Update documentation
-
-## 📊 Success Metrics
-
-Users have reported:
-- ⬆️ **40% increase** in interview callbacks
-- ⏱️ **90% time savings** on application preparation
-- ✅ **ATS compatibility** improved significantly
-- 💼 **Better interview performance** with prepared materials
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - [CrewAI](https://crewai.com) - Multi-agent orchestration framework
 - [OpenAI](https://openai.com) - GPT-4 Turbo language model
 - [Serper](https://serper.dev) - Web search API
-- [LangChain](https://langchain.com) - LLM application framework
 
-## 📧 Support
-
-For questions or issues:
-- Open an issue on GitHub
-- Check existing issues for solutions
-- Review the troubleshooting section
-
-## 🌟 Star History
-
-If this project helps you land your dream job, please consider:
-- ⭐ Starring the repository
-- 🔄 Sharing with fellow job seekers
-- 💬 Providing feedback for improvements
 
 ---
 
