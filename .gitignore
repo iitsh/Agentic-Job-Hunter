@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.txt
+tailored_resume.md
+interview_materials.md
+cv_text.txt
+CV.pdf
+fake_resume.md
