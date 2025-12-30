@@ -341,13 +341,13 @@ Agentic-Job-Hunter/
 │
 ├── L7_job_application_crew.ipynb  # Main notebook
 ├── utils.py                        # Utility functions
-├── .env                            # API keys (not tracked)
+├── .env                            # API keys 
 ├── .gitignore                      # Git ignore file
 │
-├── YOUR_CV.pdf                     # Your resume (not tracked)
+├── YOUR_CV.pdf                     # Your resume 
 │
-├── tailored_resume.md              # Generated output (not tracked)
-├── interview_materials.md          # Generated output (not tracked)
+├── tailored_resume.md              # Generated output 
+├── interview_materials.md          # Generated output 
 │
 └── README.md                       # This file
 ```
